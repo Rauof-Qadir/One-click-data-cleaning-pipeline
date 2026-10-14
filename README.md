@@ -31,6 +31,25 @@ An advanced, full-stack enterprise data cleaning, automated validation, anomaly 
 * **Backend**: Python 3.11+, FastAPI, Pydantic
 * **Styling**: Modern CSS (Emerald Green Theme)
 
+
+---
+##  Backend Setup
+
+cd backend
+python -m venv .venv
+.venv\Scripts\Activate
+pip install -r requirements.txt
+uvicorn main:app --reload
+---
+
+---
+## Frontend Setup
+
+cd frontend
+npm install
+npm run dev
+
+---
 ---
 
 ## 📥 Installation & Setup
