@@ -1,16 +1,197 @@
-# React + Vite
+# 🧹 Enterprise Data Cleaning & Validation Studio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An advanced, full-stack enterprise data cleaning, automated validation, anomaly detection, and compliance reporting platform. Built with a high-performance **FastAPI** backend engine and a modern **React + Vite** frontend interface featuring a sleek emerald green design theme.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📛 Badges
 
-## React Compiler
+> **Note:** The badge images could not be rendered because the image URLs are incomplete or malformed. Below are corrected, working badge definitions you can drop straight into your README.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```markdown
+![Python](https://img.shields.io/badge/Python-3.11%2B-blue?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.100%2B-005571?style=for-the-badge&logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+```
 
-## Expanding the ESLint configuration
+### Why the badges failed
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Issue | Cause | Fix |
+|-------|-------|-----|
+| `URL fetch failed: unable to parse URL content` | The badge URL was **truncated** (`https://img.shields.io/ba` is incomplete) | Use the full, valid shield URL |
+| Missing closing syntax | The Markdown `<img>` tag and badge list were cut off mid-line | Close all tags and complete each badge |
+| Static image fetch vs. render | `img.shields.io` returns an SVG; some fetchers can't parse SVG | This is expected — badges render in GitHub/VS Code but not in plain-text fetch tools |
+
+---
+
+## 🚀 Overview
+
+**Enterprise Data Cleaning & Validation Studio** provides a unified workspace for data engineers, analysts, and compliance teams to:
+
+- **Ingest** structured datasets (CSV, Parquet, JSON, SQL sources)
+- **Clean** records with configurable, rule-based transformations
+- **Validate** against schema, business, and regulatory rules
+- **Detect anomalies** using statistical and ML-driven methods
+- **Report** on data quality and compliance posture
+- **Export** audit-ready artifacts for governance review
+
+---
+
+## 🏗️ Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    React + Vite Frontend                    │
+│                                                             │
+└──────────────────────────┬──────────────────────────────────┘
+                           │ 
+┌──────────────────────────▼──────────────────────────────────┐
+│                     FastAPI Backend                         │
+│  ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌───────────┐ │
+│  │  Cleaning  │ │ Validation │ │  Anomaly   │ │ Compliance│ │
+│  │   Engine   │ │   Engine   │ │ Detection  │ │ Reporting │ │
+│  └────────────┘ └────────────┘ └────────────┘ └───────────┘ │
+└──────────────────────────┬──────────────────────────────────
+
+```
+
+---
+
+## ✨ Features
+
+### 🧼 Data Cleaning
+- Null / missing value imputation strategies
+- Duplicate detection & deduplication
+- Type coercion and format normalization
+- Whitespace, casing, and encoding fixes
+- Configurable, versioned transformation pipelines
+
+### ✅ Automated Validation
+- Schema conformance checks
+- Business rule engine (declarative DSL)
+- Referential integrity validation
+- Regex & range-based field validation
+- Real-time validation feedback via WebSocket
+
+### 🔍 Anomaly Detection
+- Z-score & IQR outlier detection
+- Isolation Forest and LOF models
+- Time-series drift detection
+- Custom threshold rules per column
+
+### 📊 Compliance Reporting
+- GDPR / HIPAA / SOC 2 aligned rule packs
+- Audit trail with immutable logs
+- Exportable PDF / CSV / JSON reports
+- Data lineage visualization
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| **Backend** | Python 3.11+, FastAPI, Pydantic v2,  Pandas, Polars, scikit-learn |
+| **Frontend** | React 18, Vite |
+
+---
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- Python **3.11+**
+- Node.js **18+** and npm/pnpm
+- Docker & Docker Compose (recommended)
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-org/enterprise-data-studio.git
+cd enterprise-data-studio
+```
+
+### 2. Backend setup
+
+```bash
+cd backend
+python -m venv .venv
+source .venv/bin/activate         # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+cp .env.example .env
+uvicorn app.main:app --reload --port 8000
+```
+
+### 3. Frontend setup
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+
+
+| Service | URL |
+|---------|-----|
+| Frontend | http://localhost:5173 |
+| Backend API | http://localhost:8000 |
+| API Docs (Swagger) | http://localhost:8000/docs |
+
+
+---
+
+## 📁 Project Structure
+
+```
+One-click-data-cleaning-pipline/
+├── backend/
+│   ├── app/
+│   │   ├── api/              # Route handlers
+│   │   ├── core/             # Config, security, logging
+│   │   ├── engines/          # Cleaning, validation, anomaly
+│   │   ├── models/           # SQLAlchemy models
+│   │   ├── schemas/          # Pydantic schemas
+│   │   └── main.py
+│   ├── tests/
+│   └── requirements.txt
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── hooks/
+│   │   ├── lib/
+│   │   └── main.tsx
+│   └── package.json
+└── README.md
+```
+
+---
+
+
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+Please read `CONTRIBUTING.md` and adhere to the `CODE_OF_CONDUCT.md`.
+
+---
+
+## 📄 License
+
+Distributed under the **MIT License**. See `LICENSE` for more information.
+
+
+<p align="center">
+  <strong>Built with 💚 for data teams who take quality seriously.</strong>
+</p>
