@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧹 Enterprise Data Cleaning & Validation Studio
+# 🧹Enterprise Data Cleaning & Validation Studio
 
 An advanced, full-stack enterprise data cleaning, automated validation, anomaly detection, and compliance reporting platform. Built with a high-performance FastAPI backend engine and a modern React + Vite frontend interface featuring an emerald green theme.
 
@@ -13,6 +13,17 @@ An advanced, full-stack enterprise data cleaning, automated validation, anomaly 
   <img src="https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
 </p>
+
+
+![1](./assets/1.png)
+![2](./assets/2.png)
+![3](./assets/3.png)
+![4](./assets/4.png)
+![5](./assets/5.png)
+![6](./assets/6.png)
+![7](./assets/7.png)
+![8](./assets/8.png)
+
 
 ---
 
@@ -45,9 +56,9 @@ An advanced, full-stack enterprise data cleaning, automated validation, anomaly 
 ---
 ## Frontend Setup
 
-cd frontend
-npm install
-npm run dev
+* cd frontend
+* npm install
+* npm run dev
 
 ---
 ---
