@@ -23,7 +23,7 @@ An advanced, full-stack enterprise data cleaning, automated validation, anomaly 
 ![6](./assets/6.png)
 ![7](./assets/7.png)
 ![8](./assets/8.png)
-```
+
 ---
 
 ## 🚀 Key Features
@@ -32,7 +32,7 @@ An advanced, full-stack enterprise data cleaning, automated validation, anomaly 
 * **Automated Data Cleaning**: Null/missing value imputation, duplicate removal, type coercion, and text standardization.
 * **Advanced Validation & Anomaly Detection**: Schema conformance, business rules, statistical IQR/Z-score outlier detection.
 * **Compliance & Reporting**: Audit-ready CSV/JSON exports with comprehensive quality metrics and rule logs.
-```
+
 ---
 
 ## 🛠️ Tech Stack
@@ -61,7 +61,42 @@ An advanced, full-stack enterprise data cleaning, automated validation, anomaly 
 
 ---
 ---
+## Folder Structure
 
+data-cleaning-web/
+├── backend/
+│   ├── cleaning_pipeline/
+│   │   ├── anomaly_detection.py
+│   │   ├── categorical_standardization.py
+│   │   ├── cross_column_consistency.py
+│   │   ├── datatype_and_formateconversion5.py
+│   │   ├── domain_validation.py
+│   │   ├── duplicate_resolution.py
+│   │   ├── file_ingestion_and_parsing1.py
+│   │   ├── final_qa_verification.py
+│   │   ├── initial_data_profiling2.py
+│   │   ├── missing_value_imputation6.py
+│   │   ├── numeric_validation_outliers.py
+│   │   ├── reporting_export.py
+│   │   ├── table_structure_and_headers3.py
+│   │   ├── temporal_validation.py
+│   │   └── text_and_string_cleaning4.py
+│   ├── uploads/
+│   ├── main.py
+│   └── requirements.txt
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── index.html
+│   ├── package.json
+│   └── vite.config.js
+└── .gitignore
 ## 📥 Installation & Setup
 
 ### 1. Clone the Repository
