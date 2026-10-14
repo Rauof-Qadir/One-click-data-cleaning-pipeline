@@ -23,8 +23,7 @@ An advanced, full-stack enterprise data cleaning, automated validation, anomaly 
 ![6](./assets/6.png)
 ![7](./assets/7.png)
 ![8](./assets/8.png)
-
-
+```
 ---
 
 ## 🚀 Key Features
@@ -33,7 +32,7 @@ An advanced, full-stack enterprise data cleaning, automated validation, anomaly 
 * **Automated Data Cleaning**: Null/missing value imputation, duplicate removal, type coercion, and text standardization.
 * **Advanced Validation & Anomaly Detection**: Schema conformance, business rules, statistical IQR/Z-score outlier detection.
 * **Compliance & Reporting**: Audit-ready CSV/JSON exports with comprehensive quality metrics and rule logs.
-
+```
 ---
 
 ## 🛠️ Tech Stack
