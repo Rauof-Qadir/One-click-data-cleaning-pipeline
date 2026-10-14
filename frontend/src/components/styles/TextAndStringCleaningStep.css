@@ -1,0 +1,183 @@
+/* ============================================================
+   Text & String Cleaning Step — Futuristic Dark Theme
+   ============================================================ */
+
+.text-cleaning-step-container {
+  margin-top: 20px;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.14); /* soft slate border */
+  background: linear-gradient(
+    165deg,
+    rgba(30, 41, 59, 0.6),  /* slate-800 */
+    rgba(15, 23, 42, 0.68)   /* slate-900 */
+  );
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 20px 50px -24px rgba(2, 6, 23, 0.95);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.text-cleaning-step-container:hover {
+  border-color: rgba(16, 185, 129, 0.32); /* emerald accent on hover */
+}
+
+.text-cleaning-step-title {
+  margin: 0 0 16px 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #10b981; /* emerald-500 */
+}
+
+/* --- Controls Layout --- */
+.text-cleaning-controls-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.text-cleaning-description {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #94a3b8; /* slate-400 */
+  line-height: 1.6;
+}
+
+.text-cleaning-action-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* --- Checkbox --- */
+.text-cleaning-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  cursor: pointer;
+  user-select: none;
+}
+
+.text-cleaning-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #10b981; /* emerald-500 */
+  cursor: pointer;
+}
+
+/* --- Run Button --- */
+.text-cleaning-run-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 999px; /* pill shape */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, #10b981, #059669); /* emerald gradient */
+  color: #04231a;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  box-shadow: 0 10px 30px -14px rgba(16, 185, 129, 0.5);
+}
+
+.text-cleaning-run-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px -18px rgba(16, 185, 129, 0.6);
+  filter: brightness(1.06);
+}
+
+.text-cleaning-run-btn:active:not(:disabled) {
+  transform: translateY(0) scale(0.98);
+}
+
+.text-cleaning-run-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* --- Results Layout --- */
+.text-cleaning-results-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.text-cleaning-success-msg {
+  color: #34d399; /* emerald-400 */
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* --- Stats Grid --- */
+.text-cleaning-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.text-cleaning-stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  background: rgba(30, 41, 59, 0.5);
+  transition: border-color 0.2s ease;
+}
+
+.text-cleaning-stat-card:hover {
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.text-cleaning-stat-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #64748b; /* slate-500 */
+}
+
+.text-cleaning-stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f8fafc;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Dynamic Text Colors --- */
+.text-red {
+  color: #ef4444; /* red-500 for mojibake / truncation */
+}
+
+.text-amber {
+  color: #f59e0b; /* amber-500 for whitespace issues */
+}
+
+.text-emerald {
+  color: #10b981; /* emerald-500 for safe values */
+}
+
+/* --- Error Text --- */
+.text-cleaning-error-text {
+  margin-top: 10px;
+  color: #fca5a5; /* red-300 */
+  font-size: 0.85rem;
+  background: rgba(239, 68, 68, 0.1);
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
