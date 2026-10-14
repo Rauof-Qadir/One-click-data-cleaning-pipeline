@@ -62,7 +62,7 @@ An advanced, full-stack enterprise data cleaning, automated validation, anomaly 
 ---
 ---
 ## Folder Structure
-
+```text
 data-cleaning-web/
 ├── backend/
 │   ├── cleaning_pipeline/
@@ -97,6 +97,7 @@ data-cleaning-web/
 │   ├── package.json
 │   └── vite.config.js
 └── .gitignore
+```
 ## 📥 Installation & Setup
 
 ### 1. Clone the Repository
